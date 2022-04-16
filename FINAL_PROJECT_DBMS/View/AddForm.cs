@@ -16,5 +16,18 @@ namespace FINAL_PROJECT_DBMS.View
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Add_NewEmp newAddEmp = new Add_NewEmp();
+            newAddEmp.Visible = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AddNewOrder orderForm = new AddNewOrder();
+            orderForm.Visible = true;
+           
+        }
     }
 }

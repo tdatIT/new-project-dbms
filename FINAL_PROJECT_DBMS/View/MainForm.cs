@@ -1,4 +1,5 @@
-﻿using FINAL_PROJECT_DBMS.View;
+﻿using FINAL_PROJECT_DBMS.Model;
+using FINAL_PROJECT_DBMS.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,10 +15,12 @@ namespace FINAL_PROJECT_DBMS
     public partial class Form1 : Form
     {
         private Button currentBtn;
-        private Form activeForm;
+        private Form activeForm=null;
+        private DAOConnection cntDAO = null;
         public Form1()
         {
             InitializeComponent();
+            cntDAO = new DAOConnection();
         }
         private void disableButton()
         {
@@ -105,6 +108,53 @@ namespace FINAL_PROJECT_DBMS
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            activeButton(sender);
+            openChildForm(new Home(txt_username.Text), sender);
+            lb_chucnang.Text = "TRANG CHỦ";
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            btn_home.PerformClick();
+        }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+            string username = txt_username.Text;
+            string pass = txt_password.Text;
+            if (cntDAO.login(username, pass))
+            {
+                MessageBox.Show("Đăng nhập thành công", "Thông báo", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btn_add.Enabled = true;
+                btn_del.Enabled = true;
+                btn_edit.Enabled = true;
+                btn_analyst.Enabled = true;
+                btn_home.Enabled = true;
+                btn_home.PerformClick();
+            }
+            else
+            {
+                MessageBox.Show("Đăng nhập thất bại", "Thông báo",
+                   MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txt_password_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btn_login.PerformClick();
+            }
         }
     }
 }
