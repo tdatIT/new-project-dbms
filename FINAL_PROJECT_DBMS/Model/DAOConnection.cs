@@ -86,7 +86,7 @@ namespace FINAL_PROJECT_DBMS.Model
             try
             {
                 SqlConnection cnt = getConnection();
-                cnt.Open();
+                cnt.Open();     
                 string query = "INSERT INTO order_list(c_phone_number,create_day,shop_id) " +
                     "VALUES (@c_phone,@create_day,@shop_id)";
                 SqlCommand cmd = new SqlCommand(query, cnt);
@@ -146,5 +146,39 @@ namespace FINAL_PROJECT_DBMS.Model
             }
             return false;
         }
-    }
+        public DataTable empOverOneMonth()
+        {
+            SqlConnection sqlCnt = getConnection();
+            try
+            {
+                string query = "SELECT * FROM over_1_month_work";
+                SqlDataAdapter apt = new SqlDataAdapter(query, sqlCnt);
+                DataTable dataTable = new DataTable();
+                apt.Fill(dataTable);
+                return dataTable;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return null;
+        }
+        public DataTable showUnpaidOrderlist()
+        {
+            SqlConnection sqlCnt = getConnection();
+            try
+            {
+                string query = "SELECT * FROM UNPAID_ORDER";
+                SqlDataAdapter apt = new SqlDataAdapter(query,sqlCnt);
+                DataTable data = new DataTable();
+                apt.Fill(data);
+                return data;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return null;
+        }
+    }  
 }
