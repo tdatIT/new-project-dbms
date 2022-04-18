@@ -29,23 +29,31 @@
         private void InitializeComponent()
         {
             this.pn_result = new System.Windows.Forms.Panel();
+            this.dgv_result = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbx_func = new System.Windows.Forms.ComboBox();
             this.btn_Enter = new System.Windows.Forms.Button();
             this.pn_result.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_result)).BeginInit();
             this.SuspendLayout();
             // 
             // pn_result
             // 
             this.pn_result.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pn_result.Controls.Add(this.dataGridView1);
+            this.pn_result.Controls.Add(this.dgv_result);
             this.pn_result.Location = new System.Drawing.Point(47, 153);
             this.pn_result.Name = "pn_result";
             this.pn_result.Size = new System.Drawing.Size(586, 254);
             this.pn_result.TabIndex = 0;
+            // 
+            // dgv_result
+            // 
+            this.dgv_result.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_result.Location = new System.Drawing.Point(13, 17);
+            this.dgv_result.Name = "dgv_result";
+            this.dgv_result.Size = new System.Drawing.Size(553, 224);
+            this.dgv_result.TabIndex = 2;
             // 
             // label1
             // 
@@ -57,14 +65,6 @@
             this.label1.Size = new System.Drawing.Size(134, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Chức năng thực hiện";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 17);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(553, 224);
-            this.dataGridView1.TabIndex = 2;
             // 
             // label2
             // 
@@ -78,14 +78,17 @@
             this.label2.Text = "KẾT QUẢ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // comboBox1
+            // cbx_func
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(261, 62);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(267, 21);
-            this.comboBox1.TabIndex = 3;
+            this.cbx_func.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbx_func.FormattingEnabled = true;
+            this.cbx_func.Items.AddRange(new object[] {
+            "NV có kinh nghiệm làm việc( từ 2 tháng đến 3 tháng)",
+            "Danh sách đơn hàng chưa thanh toán"});
+            this.cbx_func.Location = new System.Drawing.Point(261, 62);
+            this.cbx_func.Name = "cbx_func";
+            this.cbx_func.Size = new System.Drawing.Size(267, 21);
+            this.cbx_func.TabIndex = 3;
             // 
             // btn_Enter
             // 
@@ -100,6 +103,7 @@
             this.btn_Enter.TabIndex = 4;
             this.btn_Enter.Text = "ENTER";
             this.btn_Enter.UseVisualStyleBackColor = false;
+            this.btn_Enter.Click += new System.EventHandler(this.btn_Enter_Click);
             // 
             // AnalyticsForm
             // 
@@ -108,15 +112,16 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(147)))), ((int)(((byte)(95)))));
             this.ClientSize = new System.Drawing.Size(674, 436);
             this.Controls.Add(this.btn_Enter);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbx_func);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pn_result);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "AnalyticsForm";
             this.Text = "Analytics";
+            this.Load += new System.EventHandler(this.AnalyticsForm_Load);
             this.pn_result.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_result)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,9 +131,9 @@
 
         private System.Windows.Forms.Panel pn_result;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_result;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbx_func;
         private System.Windows.Forms.Button btn_Enter;
     }
 }
