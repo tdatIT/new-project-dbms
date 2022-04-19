@@ -180,5 +180,27 @@ namespace FINAL_PROJECT_DBMS.Model
             }
             return null;
         }
+        public bool checkoutPayment(int orderID,string voucher_id,string payment)
+        {
+            SqlConnection sqlCnt = getConnection();
+            try
+            {
+                string query = "checkout_order";
+                sqlCnt.Open();
+                SqlCommand cmd = new SqlCommand(query, sqlCnt);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@order_id", orderID);
+                cmd.Parameters.AddWithValue("@payment_method", payment);
+                cmd.Parameters.AddWithValue("@voucher_id", voucher_id);
+                cmd.ExecuteNonQuery();
+                sqlCnt.Close();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return false;
+        }
     }  
 }

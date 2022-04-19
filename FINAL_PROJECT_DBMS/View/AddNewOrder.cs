@@ -83,8 +83,88 @@ namespace FINAL_PROJECT_DBMS.View
             double price = quantity * cost;
             if (sqlDB.insertProductInOrder(order_id, product_id, quantity, price))
             {
+                showInfoPayment();
+                showVoucherItems(txt_c_phone.Text);
+                showProductInOrder();
+                pn_payment.Enabled = true; 
+            }
+        }
+
+        private void btn_payment_Click(object sender, EventArgs e)
+        {
+            string payment_method = cbx_payment_method.Text;
+            string voucher_id = cbx_voucher.Text;
+            if (sqlDB.checkoutPayment(order_id, voucher_id, payment_method))
+            {
+                MessageBox.Show("Đặt hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+        private void showInfoPayment()
+        {
+            SqlConnection sqlcnt = sqlDB.getConnection();
+            try
+            {
+                string query = "SELECT payment_amount FROM payment WHERE order_id=@order_id" ;
+                sqlcnt.Open();
+                SqlCommand cmd = new SqlCommand(query,sqlcnt);
+                cmd.Parameters.AddWithValue("@order_id", order_id);
+                SqlDataReader rd = cmd.ExecuteReader();
+                while (rd.Read())
+                {
+                    txt_totalprice.Text = rd["payment_amount"].ToString();
+                }
+                sqlcnt.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void showVoucherItems(string c_phone)
+        {
+            SqlConnection sqlcnt = sqlDB.getConnection();
+            cbx_voucher.Items.Clear();
+            try
+            {
+                string query = "SELECT voucher_id FROM VOUCHER_ITEM WHERE c_phone_number=@c_phone";
+                sqlcnt.Open();
+                SqlCommand cmd = new SqlCommand(query, sqlcnt);
+                cmd.Parameters.AddWithValue("@c_phone", c_phone);
+                SqlDataReader rd = cmd.ExecuteReader();
+                while (rd.Read())
+                {
+                    cbx_voucher.Items.Add(rd["voucher_id"].ToString());
+                }
+                sqlcnt.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void showProductInOrder()
+        {
+            SqlConnection cnt = sqlDB.getConnection();
+            try
+            {
+                string query = "SELECT * FROM show_product_in_order(@order_id)";
+               
+                SqlCommand cmd = new SqlCommand(query, cnt);
+                cmd.Parameters.AddWithValue("@order_id", order_id);
+                SqlDataAdapter apt = new SqlDataAdapter(cmd);
+                DataTable data = new DataTable();
+                apt.Fill(data);
+                dgv_order_product.DataSource = data;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
                 
             }
+        }
+        private void pn_order_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
