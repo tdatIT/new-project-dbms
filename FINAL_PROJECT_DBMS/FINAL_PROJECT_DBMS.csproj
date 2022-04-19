@@ -59,6 +59,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
     <Compile Include="Model\DAOConnection.cs" />
     <Compile Include="View\AddForm.cs">
       <SubType>Form</SubType>
