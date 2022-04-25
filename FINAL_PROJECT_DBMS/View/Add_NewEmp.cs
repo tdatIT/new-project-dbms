@@ -77,5 +77,10 @@ namespace FINAL_PROJECT_DBMS.View
             }
             sqlCnt.Close();
         }
+
+        private void cbx_shop_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

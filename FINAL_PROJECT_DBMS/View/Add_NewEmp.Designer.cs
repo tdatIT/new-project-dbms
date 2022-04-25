@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_year = new System.Windows.Forms.TextBox();
+            this.txt_month = new System.Windows.Forms.TextBox();
+            this.txt_day = new System.Windows.Forms.TextBox();
+            this.cbx_shop = new System.Windows.Forms.ComboBox();
+            this.txt_name = new System.Windows.Forms.TextBox();
+            this.cbx_role = new System.Windows.Forms.ComboBox();
+            this.txt_phone = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -38,16 +45,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txt_username = new System.Windows.Forms.TextBox();
             this.txt_pass = new System.Windows.Forms.TextBox();
-            this.txt_phone = new System.Windows.Forms.TextBox();
-            this.cbx_role = new System.Windows.Forms.ComboBox();
-            this.txt_name = new System.Windows.Forms.TextBox();
-            this.cbx_shop = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.txt_day = new System.Windows.Forms.TextBox();
-            this.txt_month = new System.Windows.Forms.TextBox();
-            this.txt_year = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +71,69 @@
             this.panel1.Size = new System.Drawing.Size(348, 290);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // txt_year
+            // 
+            this.txt_year.Location = new System.Drawing.Point(234, 195);
+            this.txt_year.Name = "txt_year";
+            this.txt_year.Size = new System.Drawing.Size(64, 22);
+            this.txt_year.TabIndex = 22;
+            // 
+            // txt_month
+            // 
+            this.txt_month.Location = new System.Drawing.Point(172, 194);
+            this.txt_month.Name = "txt_month";
+            this.txt_month.Size = new System.Drawing.Size(40, 22);
+            this.txt_month.TabIndex = 21;
+            // 
+            // txt_day
+            // 
+            this.txt_day.Location = new System.Drawing.Point(112, 194);
+            this.txt_day.Name = "txt_day";
+            this.txt_day.Size = new System.Drawing.Size(35, 22);
+            this.txt_day.TabIndex = 20;
+            // 
+            // cbx_shop
+            // 
+            this.cbx_shop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbx_shop.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbx_shop.FormattingEnabled = true;
+            this.cbx_shop.Location = new System.Drawing.Point(112, 238);
+            this.cbx_shop.Name = "cbx_shop";
+            this.cbx_shop.Size = new System.Drawing.Size(92, 25);
+            this.cbx_shop.TabIndex = 19;
+            this.cbx_shop.SelectedIndexChanged += new System.EventHandler(this.cbx_shop_SelectedIndexChanged);
+            // 
+            // txt_name
+            // 
+            this.txt_name.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_name.Location = new System.Drawing.Point(112, 32);
+            this.txt_name.Name = "txt_name";
+            this.txt_name.Size = new System.Drawing.Size(186, 25);
+            this.txt_name.TabIndex = 18;
+            // 
+            // cbx_role
+            // 
+            this.cbx_role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbx_role.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbx_role.FormattingEnabled = true;
+            this.cbx_role.Items.AddRange(new object[] {
+            "PhaChe",
+            "BaoVe",
+            "QuanLy",
+            "PhucVu"});
+            this.cbx_role.Location = new System.Drawing.Point(112, 133);
+            this.cbx_role.Name = "cbx_role";
+            this.cbx_role.Size = new System.Drawing.Size(92, 25);
+            this.cbx_role.TabIndex = 15;
+            // 
+            // txt_phone
+            // 
+            this.txt_phone.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_phone.Location = new System.Drawing.Point(112, 87);
+            this.txt_phone.Name = "txt_phone";
+            this.txt_phone.Size = new System.Drawing.Size(186, 25);
+            this.txt_phone.TabIndex = 14;
             // 
             // label7
             // 
@@ -161,47 +224,6 @@
             this.txt_pass.Size = new System.Drawing.Size(186, 25);
             this.txt_pass.TabIndex = 10;
             // 
-            // txt_phone
-            // 
-            this.txt_phone.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_phone.Location = new System.Drawing.Point(112, 87);
-            this.txt_phone.Name = "txt_phone";
-            this.txt_phone.Size = new System.Drawing.Size(186, 25);
-            this.txt_phone.TabIndex = 14;
-            // 
-            // cbx_role
-            // 
-            this.cbx_role.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbx_role.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbx_role.FormattingEnabled = true;
-            this.cbx_role.Items.AddRange(new object[] {
-            "PhaChe",
-            "BaoVe",
-            "QuanLy",
-            "PhucVu"});
-            this.cbx_role.Location = new System.Drawing.Point(112, 133);
-            this.cbx_role.Name = "cbx_role";
-            this.cbx_role.Size = new System.Drawing.Size(92, 25);
-            this.cbx_role.TabIndex = 15;
-            // 
-            // txt_name
-            // 
-            this.txt_name.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name.Location = new System.Drawing.Point(112, 32);
-            this.txt_name.Name = "txt_name";
-            this.txt_name.Size = new System.Drawing.Size(186, 25);
-            this.txt_name.TabIndex = 18;
-            // 
-            // cbx_shop
-            // 
-            this.cbx_shop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbx_shop.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbx_shop.FormattingEnabled = true;
-            this.cbx_shop.Location = new System.Drawing.Point(112, 238);
-            this.cbx_shop.Name = "cbx_shop";
-            this.cbx_shop.Size = new System.Drawing.Size(92, 25);
-            this.cbx_shop.TabIndex = 19;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -233,27 +255,6 @@
             this.label9.Size = new System.Drawing.Size(79, 19);
             this.label9.TabIndex = 13;
             this.label9.Text = "Thông tin";
-            // 
-            // txt_day
-            // 
-            this.txt_day.Location = new System.Drawing.Point(112, 194);
-            this.txt_day.Name = "txt_day";
-            this.txt_day.Size = new System.Drawing.Size(35, 22);
-            this.txt_day.TabIndex = 20;
-            // 
-            // txt_month
-            // 
-            this.txt_month.Location = new System.Drawing.Point(172, 194);
-            this.txt_month.Name = "txt_month";
-            this.txt_month.Size = new System.Drawing.Size(40, 22);
-            this.txt_month.TabIndex = 21;
-            // 
-            // txt_year
-            // 
-            this.txt_year.Location = new System.Drawing.Point(234, 195);
-            this.txt_year.Name = "txt_year";
-            this.txt_year.Size = new System.Drawing.Size(64, 22);
-            this.txt_year.TabIndex = 22;
             // 
             // Add_NewEmp
             // 
