@@ -46,7 +46,7 @@ namespace FINAL_PROJECT_DBMS.Model
                 {
                     return true;
                 }
-                return false;
+                
             }
             catch (Exception ex)
             {
@@ -199,6 +199,29 @@ namespace FINAL_PROJECT_DBMS.Model
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+            return false;
+        }
+        public bool deleteProduct(string name)
+        {
+            SqlConnection cnt = getConnection();
+            string query = "del_product";
+            try
+            {
+                cnt.Open();
+                SqlCommand cmd = new SqlCommand(query, cnt);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@name_product", name);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            finally
+            {
+                cnt.Close();
             }
             return false;
         }
