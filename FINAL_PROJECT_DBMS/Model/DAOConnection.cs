@@ -191,7 +191,10 @@ namespace FINAL_PROJECT_DBMS.Model
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@order_id", orderID);
                 cmd.Parameters.AddWithValue("@payment_method", payment);
-                cmd.Parameters.AddWithValue("@voucher_id", voucher_id);
+                if(voucher_id == null)
+                    cmd.Parameters.AddWithValue("@voucher_id", DBNull.Value);
+                else
+                    cmd.Parameters.AddWithValue("@voucher_id", voucher_id);
                 cmd.ExecuteNonQuery();
                 sqlCnt.Close();
                 return true;

@@ -94,6 +94,8 @@ namespace FINAL_PROJECT_DBMS.View
         {
             string payment_method = cbx_payment_method.Text;
             string voucher_id = cbx_voucher.Text;
+            if (voucher_id == "")
+                voucher_id = null;
             if (sqlDB.checkoutPayment(order_id, voucher_id, payment_method))
             {
                 MessageBox.Show("Đặt hàng thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
