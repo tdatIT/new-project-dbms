@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace FINAL_PROJECT_DBMS.View
 {
-    public partial class Form1 : Form
+    public partial class addNewCustomer : Form
     {
-        public Form1()
+        public addNewCustomer()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -11,8 +11,7 @@ namespace FINAL_PROJECT_DBMS.Model
 {
     public class DAOConnection
     {
-        public static readonly string cntStr = "Data Source=localhost;Initial Catalog=DBMS_FINAL_PROJECT;" +
-                                    "User ID=sa;Password=12345";
+        public static readonly string cntStr = "Data Source=LAPTOP-BGAP4L66\\SQLEXPRESS;Initial Catalog=DBMS_FINAL_PROJECT;Integrated Security=True";
         
         public DAOConnection()
         {
@@ -180,5 +179,30 @@ namespace FINAL_PROJECT_DBMS.Model
             }
             return null;
         }
+        public bool deleteEmployee(string name)
+        {
+            SqlConnection cnt = getConnection();
+            string query = "del_employee";
+            try
+            {
+                cnt.Open();
+                SqlCommand cmd = new SqlCommand(query, cnt);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@emp_name", name);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show(e.Message);
+            }
+            finally
+            {
+                cnt.Close();
+            }
+            return false;
+        }
+       
     }  
 }

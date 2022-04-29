@@ -29,5 +29,12 @@ namespace FINAL_PROJECT_DBMS.View
             orderForm.Visible = true;
            
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            addNewCustomer newCusForm = new addNewCustomer();
+            newCusForm.Visible = true;
+
+        }
     }
 }
