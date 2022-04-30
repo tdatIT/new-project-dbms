@@ -40,6 +40,11 @@ namespace FINAL_PROJECT_DBMS.View
                         dgv_result.DataSource = dbCnt.showUnpaidOrderlist();
                     }   
                     break;
+                case "In ra 5 sản phẩm bán chạy nhất":
+                    {
+                        dgv_result.DataSource = dbCnt.showRankProduct();
+                    }
+                    break;
             }
         }
 

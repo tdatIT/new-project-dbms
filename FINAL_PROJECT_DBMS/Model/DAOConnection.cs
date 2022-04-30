@@ -228,5 +228,25 @@ namespace FINAL_PROJECT_DBMS.Model
             }
             return false;
         }
+        public DataTable showRankProduct()
+        {
+            SqlConnection cnt = getConnection();
+            try
+            {
+                string query = "ranking_of_product";
+                SqlCommand cmd = new SqlCommand(query, cnt);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter apt = new SqlDataAdapter(cmd);
+                DataTable data = new DataTable();
+                apt.Fill(data);
+                return data;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return null;
+        }
     }  
 }
