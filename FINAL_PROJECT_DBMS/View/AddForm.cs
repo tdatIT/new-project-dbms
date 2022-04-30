@@ -29,5 +29,25 @@ namespace FINAL_PROJECT_DBMS.View
             orderForm.Visible = true;
            
         }
+ 
+
+     
+
+        private void AddForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            AddcCustomer customerForm = new AddcCustomer();
+            customerForm.Visible = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AddNewVoucher Voucherform = new AddNewVoucher();
+            Voucherform.Visible = true;
+        }
     }
 }
