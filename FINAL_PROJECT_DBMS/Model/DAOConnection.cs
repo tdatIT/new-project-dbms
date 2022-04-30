@@ -11,8 +11,7 @@ namespace FINAL_PROJECT_DBMS.Model
 {
     public class DAOConnection
     {
-        public static readonly string cntStr = "Data Source=localhost;Initial Catalog=DBMS_FINAL_PROJECT;" +
-                                    "User ID=sa;Password=12345";
+        public static readonly string cntStr = "Data Source=LAPTOP-VDUMRGAT\\SQLEXPRESS;Initial Catalog=DBMS_FINAL_PROJECT;Integrated Security=True";
         
         public DAOConnection()
         {
@@ -71,6 +70,56 @@ namespace FINAL_PROJECT_DBMS.Model
                 cmd.Parameters.AddWithValue("@shop_id", SqlDbType.Char).Value = shopid;
                 cmd.Parameters.AddWithValue("@username", SqlDbType.Char).Value = username;
                 cmd.Parameters.AddWithValue("@password", SqlDbType.Char).Value = pass;
+                cmd.ExecuteNonQuery();
+                cnt.Close();
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            return false;
+        }
+        public bool addNewCustomer(string c_phone, string Birthday, string address, string type)
+        {
+
+            try
+            {
+                SqlConnection cnt = getConnection();
+                cnt.Open();
+                string query = "add_new_Customer ";
+                SqlCommand cmd = new SqlCommand(query, cnt);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@c_phone", SqlDbType.Char).Value = c_phone;
+                cmd.Parameters.AddWithValue("@birthday", SqlDbType.Date).Value = Birthday;
+                cmd.Parameters.AddWithValue("@address", SqlDbType.NChar).Value = address;
+                cmd.Parameters.AddWithValue("@Type_cus", SqlDbType.Char).Value = type;
+                cmd.ExecuteNonQuery();
+                cnt.Close();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return false;
+        }
+        public bool addNewVoucher(string VoucherID, string discount, string description, string start_date, string end_date, string contraint)
+        {
+            try
+            {
+                SqlConnection cnt = getConnection();
+                string query = "add_new_Voucher";
+                cnt.Open();
+                SqlCommand cmd = new SqlCommand(query, cnt);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@voucher_id", SqlDbType.Char).Value = VoucherID;
+                cmd.Parameters.AddWithValue("@discount", SqlDbType.Real).Value = discount;
+                cmd.Parameters.AddWithValue("@description", SqlDbType.NChar).Value = description;
+                cmd.Parameters.AddWithValue("@start_day", SqlDbType.Date).Value = start_date;
+                cmd.Parameters.AddWithValue("@end_day", SqlDbType.Date).Value = end_date;
+                cmd.Parameters.AddWithValue("@voucher_constraint", SqlDbType.Char).Value = contraint;
                 cmd.ExecuteNonQuery();
                 cnt.Close();
                 return true;

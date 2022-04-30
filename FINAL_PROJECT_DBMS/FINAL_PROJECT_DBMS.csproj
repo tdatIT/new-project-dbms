@@ -59,6 +59,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="View\AddcCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddcCustomer.Designer.cs">
+      <DependentUpon>AddcCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\DAOConnection.cs" />
     <Compile Include="View\AddForm.cs">
       <SubType>Form</SubType>
@@ -71,6 +77,12 @@
     </Compile>
     <Compile Include="View\AddNewOrder.Designer.cs">
       <DependentUpon>AddNewOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddNewVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddNewVoucher.Designer.cs">
+      <DependentUpon>AddNewVoucher.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Add_NewEmp.cs">
       <SubType>Form</SubType>
@@ -116,11 +128,17 @@
     <Compile Include="View\UpdateForm.Designer.cs">
       <DependentUpon>UpdateForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\AddcCustomer.resx">
+      <DependentUpon>AddcCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\AddForm.resx">
       <DependentUpon>AddForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\AddNewOrder.resx">
       <DependentUpon>AddNewOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AddNewVoucher.resx">
+      <DependentUpon>AddNewVoucher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Add_NewEmp.resx">
       <DependentUpon>Add_NewEmp.cs</DependentUpon>
