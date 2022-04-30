@@ -102,6 +102,11 @@
     </Compile>
     <Compile Include="View\DeleteEmployee.Designer.cs">
       <DependentUpon>DeleteEmployee.cs</DependentUpon>
+    <Compile Include="View\DeleteProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DeleteProduct.Designer.cs">
+      <DependentUpon>DeleteProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Home.cs">
       <SubType>Form</SubType>
@@ -126,7 +131,7 @@
     <EmbeddedResource Include="View\AddForm.resx">
       <DependentUpon>AddForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\AddNewOrder.resx">
+    <EmbeddedResource Include="View\fOrder.resx">
       <DependentUpon>AddNewOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Add_NewEmp.resx">
@@ -134,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\AnalyticsForm.resx">
       <DependentUpon>AnalyticsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DeleteProduct.resx">
+      <DependentUpon>DeleteProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\DelForm.resx">
       <DependentUpon>DelForm.cs</DependentUpon>

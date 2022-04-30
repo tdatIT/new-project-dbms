@@ -44,27 +44,27 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbx_total = new System.Windows.Forms.TextBox();
+            this.txt_totalprice = new System.Windows.Forms.TextBox();
             this.cbx_voucher = new System.Windows.Forms.ComboBox();
             this.cbx_payment_method = new System.Windows.Forms.ComboBox();
             this.pn_product = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.btn_add_product = new System.Windows.Forms.Button();
             this.txt_amount = new System.Windows.Forms.TextBox();
-            this.dgv_order_product = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.dgv_menu = new System.Windows.Forms.DataGridView();
             this.product_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name_product = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.dgv_order_product = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.pn_order.SuspendLayout();
             this.pn_payment.SuspendLayout();
             this.pn_product.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_menu)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_order_product)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_menu)).BeginInit();
             this.SuspendLayout();
             // 
             // pn_order
@@ -83,6 +83,7 @@
             this.pn_order.Name = "pn_order";
             this.pn_order.Size = new System.Drawing.Size(258, 180);
             this.pn_order.TabIndex = 0;
+            this.pn_order.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_order_Paint);
             // 
             // cbx_shop
             // 
@@ -170,7 +171,7 @@
             this.pn_payment.Controls.Add(this.label4);
             this.pn_payment.Controls.Add(this.label3);
             this.pn_payment.Controls.Add(this.label2);
-            this.pn_payment.Controls.Add(this.cbx_total);
+            this.pn_payment.Controls.Add(this.txt_totalprice);
             this.pn_payment.Controls.Add(this.cbx_voucher);
             this.pn_payment.Controls.Add(this.cbx_payment_method);
             this.pn_payment.Enabled = false;
@@ -196,6 +197,7 @@
             this.btn_payment.TabIndex = 6;
             this.btn_payment.Text = "Thanh toán";
             this.btn_payment.UseVisualStyleBackColor = true;
+            this.btn_payment.Click += new System.EventHandler(this.btn_payment_Click);
             // 
             // label4
             // 
@@ -224,13 +226,13 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Phương thức TT";
             // 
-            // cbx_total
+            // txt_totalprice
             // 
-            this.cbx_total.Location = new System.Drawing.Point(121, 100);
-            this.cbx_total.Name = "cbx_total";
-            this.cbx_total.ReadOnly = true;
-            this.cbx_total.Size = new System.Drawing.Size(111, 23);
-            this.cbx_total.TabIndex = 2;
+            this.txt_totalprice.Location = new System.Drawing.Point(121, 100);
+            this.txt_totalprice.Name = "txt_totalprice";
+            this.txt_totalprice.ReadOnly = true;
+            this.txt_totalprice.Size = new System.Drawing.Size(111, 23);
+            this.txt_totalprice.TabIndex = 2;
             // 
             // cbx_voucher
             // 
@@ -245,6 +247,10 @@
             // 
             this.cbx_payment_method.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbx_payment_method.FormattingEnabled = true;
+            this.cbx_payment_method.Items.AddRange(new object[] {
+            "Trực tiếp",
+            "Momo",
+            "Giao hàng"});
             this.cbx_payment_method.Location = new System.Drawing.Point(121, 22);
             this.cbx_payment_method.Name = "cbx_payment_method";
             this.cbx_payment_method.Size = new System.Drawing.Size(182, 23);
@@ -262,15 +268,6 @@
             this.pn_product.Name = "pn_product";
             this.pn_product.Size = new System.Drawing.Size(644, 240);
             this.pn_product.TabIndex = 2;
-            // 
-            // panel4
-            // 
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.dgv_order_product);
-            this.panel4.Location = new System.Drawing.Point(350, 23);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(289, 191);
-            this.panel4.TabIndex = 1;
             // 
             // btn_add_product
             // 
@@ -290,45 +287,6 @@
             this.txt_amount.TabIndex = 1;
             this.txt_amount.Text = "1";
             this.txt_amount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // dgv_order_product
-            // 
-            this.dgv_order_product.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_order_product.Location = new System.Drawing.Point(15, 14);
-            this.dgv_order_product.Name = "dgv_order_product";
-            this.dgv_order_product.Size = new System.Drawing.Size(259, 164);
-            this.dgv_order_product.TabIndex = 0;
-            this.dgv_order_product.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_order_product_CellContentClick);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(75, 229);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(136, 20);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "DANH SÁCH MÓN";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(75, 22);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(124, 20);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "TẠO ĐƠN HÀNG";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(409, 25);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(105, 20);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "THANH TOÁN";
             // 
             // dgv_menu
             // 
@@ -370,6 +328,54 @@
             this.cost.ReadOnly = true;
             this.cost.Width = 50;
             // 
+            // panel4
+            // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.dgv_order_product);
+            this.panel4.Location = new System.Drawing.Point(350, 23);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(289, 191);
+            this.panel4.TabIndex = 1;
+            // 
+            // dgv_order_product
+            // 
+            this.dgv_order_product.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_order_product.Location = new System.Drawing.Point(15, 14);
+            this.dgv_order_product.Name = "dgv_order_product";
+            this.dgv_order_product.Size = new System.Drawing.Size(259, 164);
+            this.dgv_order_product.TabIndex = 0;
+            this.dgv_order_product.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_order_product_CellContentClick);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(75, 229);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(136, 20);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "DANH SÁCH MÓN";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(75, 22);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(124, 20);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "TẠO ĐƠN HÀNG";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(409, 25);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(105, 20);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "THANH TOÁN";
+            // 
             // AddNewOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -391,9 +397,9 @@
             this.pn_payment.PerformLayout();
             this.pn_product.ResumeLayout(false);
             this.pn_product.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_menu)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_order_product)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_menu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -419,7 +425,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox cbx_total;
+        private System.Windows.Forms.TextBox txt_totalprice;
         private System.Windows.Forms.ComboBox cbx_voucher;
         private System.Windows.Forms.ComboBox cbx_payment_method;
         private System.Windows.Forms.Label label5;
