@@ -84,7 +84,8 @@
             this.cbx_func.FormattingEnabled = true;
             this.cbx_func.Items.AddRange(new object[] {
             "NV có kinh nghiệm làm việc( từ 2 tháng đến 3 tháng)",
-            "Danh sách đơn hàng chưa thanh toán"});
+            "Danh sách đơn hàng chưa thanh toán",
+            "In ra 5 sản phẩm bán chạy nhất"});
             this.cbx_func.Location = new System.Drawing.Point(261, 62);
             this.cbx_func.Name = "cbx_func";
             this.cbx_func.Size = new System.Drawing.Size(267, 21);

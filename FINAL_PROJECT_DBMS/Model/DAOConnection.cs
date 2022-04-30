@@ -191,7 +191,10 @@ namespace FINAL_PROJECT_DBMS.Model
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@order_id", orderID);
                 cmd.Parameters.AddWithValue("@payment_method", payment);
-                cmd.Parameters.AddWithValue("@voucher_id", voucher_id);
+                if(voucher_id == null)
+                    cmd.Parameters.AddWithValue("@voucher_id", DBNull.Value);
+                else
+                    cmd.Parameters.AddWithValue("@voucher_id", voucher_id);
                 cmd.ExecuteNonQuery();
                 sqlCnt.Close();
                 return true;
@@ -224,6 +227,26 @@ namespace FINAL_PROJECT_DBMS.Model
                 cnt.Close();
             }
             return false;
+        }
+        public DataTable showRankProduct()
+        {
+            SqlConnection cnt = getConnection();
+            try
+            {
+                string query = "ranking_of_product";
+                SqlCommand cmd = new SqlCommand(query, cnt);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter apt = new SqlDataAdapter(cmd);
+                DataTable data = new DataTable();
+                apt.Fill(data);
+                return data;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return null;
         }
     }  
 }
