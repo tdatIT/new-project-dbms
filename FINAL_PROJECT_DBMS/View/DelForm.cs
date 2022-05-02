@@ -17,10 +17,15 @@ namespace FINAL_PROJECT_DBMS.View
             InitializeComponent();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DeleteEmployee deleteEmployee = new DeleteEmployee();
+            deleteEmployee.Visible = true;
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
-            DeleteProduct form2 = new DeleteProduct();
-            form2.Visible = true;
+            
         }
     }
 }
