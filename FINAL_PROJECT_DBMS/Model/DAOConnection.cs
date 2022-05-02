@@ -11,7 +11,8 @@ namespace FINAL_PROJECT_DBMS.Model
 {
     public class DAOConnection
     {
-        public static readonly string cntStr  "Data Source=localhost;Initial Catalog=DBMS_FINAL_PROJECT;Integrated Security=True";
+        public static readonly string cntStr = "Data Source=localhost;Initial Catalog=DBMS_FINAL_PROJECT" +
+            ";User ID=sa;Password=12345";
         
         public DAOConnection()
         {
@@ -82,7 +83,6 @@ namespace FINAL_PROJECT_DBMS.Model
         }
         public bool addNewCustomer(string c_phone, string Birthday, string address, string type)
         {
-
             try
             {
                 SqlConnection cnt = getConnection();
@@ -317,6 +317,29 @@ namespace FINAL_PROJECT_DBMS.Model
             }
             finally
             {
+                cnt.Close();
+            }
+            return false;
+        }
+        public bool updateProduct(int id,double price,double cost)
+        {
+            SqlConnection cnt = getConnection();
+            string query = "update_product";
+            try
+            {
+                cnt.Open();
+                SqlCommand cmd = new SqlCommand(query, cnt);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@product_id", id);
+                cmd.Parameters.AddWithValue("@cost", price);
+                cmd.Parameters.AddWithValue("@production_cost", cost);
+                cmd.ExecuteNonQuery();
+                cnt.Close();
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
                 cnt.Close();
             }
             return false;

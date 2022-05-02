@@ -24,7 +24,8 @@ namespace FINAL_PROJECT_DBMS.View
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            UpdateProduct updateProduct = new UpdateProduct();
+            updateProduct.Visible = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
