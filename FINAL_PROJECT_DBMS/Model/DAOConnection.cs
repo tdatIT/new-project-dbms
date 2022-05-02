@@ -344,5 +344,27 @@ namespace FINAL_PROJECT_DBMS.Model
             }
             return false;
         }
+        public bool updateRole(int id, string role)
+        {
+            SqlConnection cnt = getConnection();
+            string query = "update_employee";
+            try
+            {
+                cnt.Open();
+                SqlCommand cmd = new SqlCommand(query, cnt);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@emp_id", id);
+                cmd.Parameters.AddWithValue("@emp_role", role);
+                cmd.ExecuteNonQuery();
+                cnt.Close();
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                cnt.Close();
+            }
+            return false;
+        }
     }  
 }
