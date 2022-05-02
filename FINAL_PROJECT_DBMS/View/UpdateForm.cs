@@ -30,12 +30,13 @@ namespace FINAL_PROJECT_DBMS.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            UpdateRole updateRole = new UpdateRole();
+            updateRole.Visible = true;
         }
 
         private void UpdateForm_Load(object sender, EventArgs e)
         {
-
+          
         }
 
         private void button4_Click(object sender, EventArgs e)
