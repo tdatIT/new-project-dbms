@@ -19,13 +19,18 @@ namespace FINAL_PROJECT_DBMS.View
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DeleteEmployee deleteEmployee = new DeleteEmployee();
-            deleteEmployee.Visible = true;
+             
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+           
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            DeleteEmployee deleteEmployee = new DeleteEmployee();
+            deleteEmployee.Visible = true;
         }
     }
 }
