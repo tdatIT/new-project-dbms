@@ -96,6 +96,12 @@
     <Compile Include="View\AnalyticsForm.Designer.cs">
       <DependentUpon>AnalyticsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\DeleteEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DeleteEmployee.Designer.cs">
+      <DependentUpon>DeleteEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\DelForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\AnalyticsForm.resx">
       <DependentUpon>AnalyticsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\DeleteEmployee.resx">
+      <DependentUpon>DeleteEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\DeleteProduct.resx">
       <DependentUpon>DeleteProduct.cs</DependentUpon>
