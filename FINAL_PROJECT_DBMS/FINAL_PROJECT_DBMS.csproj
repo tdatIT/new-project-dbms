@@ -129,6 +129,12 @@
     <Compile Include="View\DeleteProduct.Designer.cs">
       <DependentUpon>DeleteProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\DelOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DelOrder.Designer.cs">
+      <DependentUpon>DelOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,12 @@
     </Compile>
     <Compile Include="View\UpdateForm.Designer.cs">
       <DependentUpon>UpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UpdatePayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\UpdatePayment.Designer.cs">
+      <DependentUpon>UpdatePayment.cs</DependentUpon>
     </Compile>
     <Compile Include="View\UpdateProduct.cs">
       <SubType>Form</SubType>
@@ -188,6 +200,9 @@
     <EmbeddedResource Include="View\DelForm.resx">
       <DependentUpon>DelForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\DelOrder.resx">
+      <DependentUpon>DelOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,6 +221,9 @@
     </Compile>
     <EmbeddedResource Include="View\UpdateForm.resx">
       <DependentUpon>UpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UpdatePayment.resx">
+      <DependentUpon>UpdatePayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UpdateProduct.resx">
       <DependentUpon>UpdateProduct.cs</DependentUpon>
