@@ -366,5 +366,29 @@ namespace FINAL_PROJECT_DBMS.Model
             }
             return false;
         }
+        public bool updatePayment(string method, string status, double amount, int id)
+        {
+            SqlConnection cnt = getConnection();
+            string query = "update_payment";
+            try
+            {
+                cnt.Open();
+                SqlCommand cmd = new SqlCommand(query, cnt);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@payment_method", method);
+                cmd.Parameters.AddWithValue("@payment_status", status);
+                cmd.Parameters.AddWithValue("@payment_amount", amount);
+                cmd.Parameters.AddWithValue("@order_id", id);
+                cmd.ExecuteNonQuery();
+                cnt.Close();
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                cnt.Close();
+            }
+            return false;
+        }
     }  
 }

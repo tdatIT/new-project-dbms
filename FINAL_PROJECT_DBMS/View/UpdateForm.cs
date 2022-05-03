@@ -19,7 +19,8 @@ namespace FINAL_PROJECT_DBMS.View
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            UpdatePayment updatePayment = new UpdatePayment();
+            updatePayment.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -149,6 +149,12 @@
     <Compile Include="View\UpdateForm.Designer.cs">
       <DependentUpon>UpdateForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\UpdatePayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\UpdatePayment.Designer.cs">
+      <DependentUpon>UpdatePayment.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\UpdateProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +212,9 @@
     </Compile>
     <EmbeddedResource Include="View\UpdateForm.resx">
       <DependentUpon>UpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UpdatePayment.resx">
+      <DependentUpon>UpdatePayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UpdateProduct.resx">
       <DependentUpon>UpdateProduct.cs</DependentUpon>
