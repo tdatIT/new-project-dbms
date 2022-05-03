@@ -390,5 +390,26 @@ namespace FINAL_PROJECT_DBMS.Model
             }
             return false;
         }
+        public bool delOrder(int order_id)
+        {
+            SqlConnection cnt = getConnection();
+            string query = "delete_order_trans";
+            try
+            {
+                cnt.Open();
+                SqlCommand cmd = new SqlCommand(query, cnt);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@order_id", order_id);
+                cmd.ExecuteNonQuery();
+                cnt.Close();
+                return true;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                cnt.Close();
+            }
+            return false;
+        }
     }  
 }

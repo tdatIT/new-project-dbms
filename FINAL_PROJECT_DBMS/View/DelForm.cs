@@ -31,7 +31,8 @@ namespace FINAL_PROJECT_DBMS.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            DelOrder delOrder = new DelOrder();
+            delOrder.Visible = true;
         }
     }
 }
