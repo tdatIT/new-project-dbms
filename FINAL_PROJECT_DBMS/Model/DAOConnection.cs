@@ -411,5 +411,26 @@ namespace FINAL_PROJECT_DBMS.Model
             }
             return false;
         }
+        public DataTable showDiffBtwCost(string shop_id)
+        {
+            SqlConnection cnt = getConnection();
+            try
+            {
+                string query = "diff_btw_cost_each_month";
+                SqlCommand cmd = new SqlCommand(query, cnt);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@shop_id", shop_id);
+                SqlDataAdapter apt = new SqlDataAdapter(cmd);
+                DataTable data = new DataTable();
+                apt.Fill(data);
+                return data;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return null;
+        }
     }  
 }
