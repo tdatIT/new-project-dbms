@@ -41,18 +41,20 @@
             this.pn_1.Controls.Add(this.label1);
             this.pn_1.Controls.Add(this.cbx_product_name);
             this.pn_1.Controls.Add(this.btn_enter);
-            this.pn_1.Location = new System.Drawing.Point(35, 30);
+            this.pn_1.Location = new System.Drawing.Point(13, 13);
+            this.pn_1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pn_1.Name = "pn_1";
-            this.pn_1.Size = new System.Drawing.Size(391, 109);
+            this.pn_1.Size = new System.Drawing.Size(590, 182);
             this.pn_1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 16);
+            this.label1.Location = new System.Drawing.Point(23, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 17);
+            this.label1.Size = new System.Drawing.Size(195, 23);
             this.label1.TabIndex = 5;
             this.label1.Text = "Chọn sản phẩm cần xóa";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -61,18 +63,20 @@
             // 
             this.cbx_product_name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbx_product_name.FormattingEnabled = true;
-            this.cbx_product_name.Location = new System.Drawing.Point(166, 14);
+            this.cbx_product_name.Location = new System.Drawing.Point(295, 21);
+            this.cbx_product_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbx_product_name.Name = "cbx_product_name";
-            this.cbx_product_name.Size = new System.Drawing.Size(205, 21);
+            this.cbx_product_name.Size = new System.Drawing.Size(272, 24);
             this.cbx_product_name.TabIndex = 4;
             this.cbx_product_name.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // btn_enter
             // 
             this.btn_enter.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_enter.Location = new System.Drawing.Point(140, 58);
+            this.btn_enter.Location = new System.Drawing.Point(209, 104);
+            this.btn_enter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_enter.Name = "btn_enter";
-            this.btn_enter.Size = new System.Drawing.Size(108, 35);
+            this.btn_enter.Size = new System.Drawing.Size(144, 43);
             this.btn_enter.TabIndex = 3;
             this.btn_enter.Text = "XÁC NHẬN";
             this.btn_enter.UseVisualStyleBackColor = true;
@@ -80,10 +84,11 @@
             // 
             // DeleteProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(462, 169);
+            this.ClientSize = new System.Drawing.Size(616, 208);
             this.Controls.Add(this.pn_1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DeleteProduct";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.DeleteProduct_Load);
