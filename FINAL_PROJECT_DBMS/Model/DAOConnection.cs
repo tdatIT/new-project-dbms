@@ -11,8 +11,7 @@ namespace FINAL_PROJECT_DBMS.Model
 {
     public class DAOConnection
     {
-        public static readonly string cntStr = "Data Source=localhost;Initial Catalog=DBMS_FINAL_PROJECT" +
-            ";User ID=sa;Password=12345";
+        public static readonly string cntStr = "Data Source=DESKTOP-I5D50PI;Initial Catalog=DBMS_FINAL_PROJECT;Integrated Security=True";
         
         public DAOConnection()
         {
@@ -445,6 +444,27 @@ namespace FINAL_PROJECT_DBMS.Model
                 DataTable data = new DataTable();
                 apt.Fill(data);
                 return data;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return null;
+        }
+        public DataTable showcountvoucherinmonth(int month)
+        {
+            SqlConnection cnt = getConnection();
+            try
+            {
+                string query = "count_voucher_in_month";
+                SqlCommand cmd = new SqlCommand(query, cnt);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@month", month);
+                SqlDataAdapter apt = new SqlDataAdapter(cmd);
+                DataTable data = new DataTable();
+                apt.Fill(data);
+                return data; 
 
             }
             catch (Exception ex)

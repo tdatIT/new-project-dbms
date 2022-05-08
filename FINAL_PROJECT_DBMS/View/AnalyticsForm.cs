@@ -60,6 +60,12 @@ namespace FINAL_PROJECT_DBMS.View
                         analystic_2.Visible = true;
                     }
                     break;
+                case "Thống kê voucher được sử dụng trong tháng":
+                    {
+                        Analystic_Voucher Analystic_Voucher = new Analystic_Voucher();
+                        Analystic_Voucher.Visible = true;
+                    }
+                    break;
             }
         }
 
