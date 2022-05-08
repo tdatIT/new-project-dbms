@@ -74,6 +74,18 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="View\AnalysticProductBest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AnalysticProductBest.Designer.cs">
+      <DependentUpon>AnalysticProductBest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\AnalysticTotalPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AnalysticTotalPayment.Designer.cs">
+      <DependentUpon>AnalysticTotalPayment.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\AddcCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,6 +197,12 @@
     <Compile Include="View\UpdateRole.Designer.cs">
       <DependentUpon>UpdateRole.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\AnalysticProductBest.resx">
+      <DependentUpon>AnalysticProductBest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\AnalysticTotalPayment.resx">
+      <DependentUpon>AnalysticTotalPayment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\AddcCustomer.resx">
       <DependentUpon>AddcCustomer.cs</DependentUpon>
     </EmbeddedResource>
