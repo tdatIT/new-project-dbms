@@ -53,6 +53,7 @@
             this.dgv_result.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_result.Location = new System.Drawing.Point(13, 17);
             this.dgv_result.Name = "dgv_result";
+            this.dgv_result.RowHeadersWidth = 51;
             this.dgv_result.Size = new System.Drawing.Size(553, 224);
             this.dgv_result.TabIndex = 2;
             // 
@@ -63,7 +64,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(130, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 17);
+            this.label1.Size = new System.Drawing.Size(172, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "Chức năng thực hiện";
             // 
@@ -74,7 +75,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(97, 141);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 21);
+            this.label2.Size = new System.Drawing.Size(93, 28);
             this.label2.TabIndex = 2;
             this.label2.Text = "KẾT QUẢ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -88,10 +89,15 @@
             "Danh sách đơn hàng chưa thanh toán",
             "In ra 5 sản phẩm bán chạy nhất",
             "Phân tích chênh lệch phí duy trì cửa hàng",
-            "Xem doanh thu, lợi nhuận của cửa hàng"});
+            "Xem doanh thu, lợi nhuận của cửa hàng",
+            "Tổng chi phí 3 tháng gần nhất",
+            "Voucher có thể sử dụng trong ngày",
+            "Những chuỗi chi nhánh ở TP.HCM",
+            "Xem số tiền khách hàng thanh toán",
+            "Sản phẩm bán chạy của từng cửa hàng"});
             this.cbx_func.Location = new System.Drawing.Point(284, 65);
             this.cbx_func.Name = "cbx_func";
-            this.cbx_func.Size = new System.Drawing.Size(267, 21);
+            this.cbx_func.Size = new System.Drawing.Size(267, 27);
             this.cbx_func.TabIndex = 3;
             // 
             // btn_Enter
@@ -116,13 +122,13 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(258, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(157, 21);
+            this.label3.Size = new System.Drawing.Size(198, 28);
             this.label3.TabIndex = 5;
             this.label3.Text = "PHÂN TÍCH DỮ LIỆU";
             // 
             // AnalyticsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(136)))), ((int)(((byte)(230)))));
             this.ClientSize = new System.Drawing.Size(674, 436);
