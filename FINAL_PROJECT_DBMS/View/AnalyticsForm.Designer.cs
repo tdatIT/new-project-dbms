@@ -90,6 +90,7 @@
             "In ra 5 sản phẩm bán chạy nhất",
             "Phân tích chênh lệch phí duy trì cửa hàng",
             "Xem doanh thu, lợi nhuận của cửa hàng",
+            "Thống kê voucher được sử dụng trong tháng",
             "Tổng chi phí 3 tháng gần nhất",
             "Voucher có thể sử dụng trong ngày",
             "Những chuỗi chi nhánh ở TP.HCM",
