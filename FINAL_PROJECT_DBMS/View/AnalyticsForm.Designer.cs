@@ -35,9 +35,6 @@
             this.cbx_func = new System.Windows.Forms.ComboBox();
             this.btn_Enter = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_input = new System.Windows.Forms.TextBox();
-            this.btn_input = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.pn_result.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_result)).BeginInit();
             this.SuspendLayout();
@@ -56,8 +53,10 @@
             this.dgv_result.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_result.Location = new System.Drawing.Point(13, 17);
             this.dgv_result.Name = "dgv_result";
+            this.dgv_result.RowHeadersWidth = 51;
             this.dgv_result.Size = new System.Drawing.Size(553, 224);
             this.dgv_result.TabIndex = 2;
+            this.dgv_result.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_result_CellContentClick);
             // 
             // label1
             // 
@@ -66,7 +65,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(50, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 17);
+            this.label1.Size = new System.Drawing.Size(172, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "Chức năng thực hiện";
             // 
@@ -77,7 +76,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(97, 141);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 21);
+            this.label2.Size = new System.Drawing.Size(93, 28);
             this.label2.TabIndex = 2;
             this.label2.Text = "KẾT QUẢ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -90,10 +89,13 @@
             "NV có kinh nghiệm làm việc( từ 2 tháng đến 3 tháng)",
             "Danh sách đơn hàng chưa thanh toán",
             "In ra 5 sản phẩm bán chạy nhất",
-            "Phân tích chênh lệch phí duy trì cửa hàng"});
+            "Phân tích chênh lệch phí duy trì cửa hàng",
+            "1",
+            "2",
+            "3"});
             this.cbx_func.Location = new System.Drawing.Point(213, 65);
             this.cbx_func.Name = "cbx_func";
-            this.cbx_func.Size = new System.Drawing.Size(267, 21);
+            this.cbx_func.Size = new System.Drawing.Size(267, 27);
             this.cbx_func.TabIndex = 3;
             // 
             // btn_Enter
@@ -118,54 +120,16 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(258, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(157, 21);
+            this.label3.Size = new System.Drawing.Size(198, 28);
             this.label3.TabIndex = 5;
             this.label3.Text = "PHÂN TÍCH DỮ LIỆU";
             // 
-            // txt_input
-            // 
-            this.txt_input.Enabled = false;
-            this.txt_input.Location = new System.Drawing.Point(274, 111);
-            this.txt_input.Name = "txt_input";
-            this.txt_input.Size = new System.Drawing.Size(117, 22);
-            this.txt_input.TabIndex = 6;
-            // 
-            // btn_input
-            // 
-            this.btn_input.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btn_input.Enabled = false;
-            this.btn_input.FlatAppearance.BorderSize = 0;
-            this.btn_input.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_input.Font = new System.Drawing.Font("Segoe UI Black", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_input.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_input.Location = new System.Drawing.Point(417, 111);
-            this.btn_input.Name = "btn_input";
-            this.btn_input.Size = new System.Drawing.Size(63, 22);
-            this.btn_input.TabIndex = 7;
-            this.btn_input.Text = "GO";
-            this.btn_input.UseVisualStyleBackColor = false;
-            this.btn_input.Click += new System.EventHandler(this.btn_input_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(210, 114);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 17);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "INPUT";
-            // 
             // AnalyticsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(136)))), ((int)(((byte)(230)))));
             this.ClientSize = new System.Drawing.Size(674, 436);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.btn_input);
-            this.Controls.Add(this.txt_input);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btn_Enter);
             this.Controls.Add(this.cbx_func);
@@ -192,8 +156,5 @@
         private System.Windows.Forms.ComboBox cbx_func;
         private System.Windows.Forms.Button btn_Enter;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_input;
-        private System.Windows.Forms.Button btn_input;
-        private System.Windows.Forms.Label label4;
     }
 }

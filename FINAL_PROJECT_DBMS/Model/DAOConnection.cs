@@ -11,12 +11,11 @@ namespace FINAL_PROJECT_DBMS.Model
 {
     public class DAOConnection
     {
-        public static readonly string cntStr = "Data Source=localhost;Initial Catalog=DBMS_FINAL_PROJECT" +
-            ";User ID=sa;Password=12345";
-        
+        public static readonly string cntStr = "Data Source=LAPTOP-VDUMRGAT\\SQLEXPRESS;Initial Catalog=DBMS_FINAL_PROJECT;Integrated Security=True";
+
         public DAOConnection()
         {
-            
+
         }
         public SqlConnection getConnection()
         {
@@ -31,7 +30,7 @@ namespace FINAL_PROJECT_DBMS.Model
             }
             return cnt;
         }
-        public bool login(string username,string password)
+        public bool login(string username, string password)
         {
             SqlConnection cnt = getConnection();
             string sql = "SELECT username,password FROM EMPLOYEE " +
@@ -46,16 +45,16 @@ namespace FINAL_PROJECT_DBMS.Model
                 {
                     return true;
                 }
-                
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
             return false;
-           
+
         }
-        public bool addNewEmp(string name,string phone, string role,string begin_date,string shopid,string username,string pass)
+        public bool addNewEmp(string name, string phone, string role, string begin_date, string shopid, string username, string pass)
         {
             try
             {
@@ -130,12 +129,12 @@ namespace FINAL_PROJECT_DBMS.Model
             }
             return false;
         }
-        public bool insertNewOrder(string c_phone,string createDate,string shopid)
+        public bool insertNewOrder(string c_phone, string createDate, string shopid)
         {
             try
             {
                 SqlConnection cnt = getConnection();
-                cnt.Open();     
+                cnt.Open();
                 string query = "INSERT INTO order_list(c_phone_number,create_day,shop_id) " +
                     "VALUES (@c_phone,@create_day,@shop_id)";
                 SqlCommand cmd = new SqlCommand(query, cnt);
@@ -171,8 +170,8 @@ namespace FINAL_PROJECT_DBMS.Model
             }
             return null;
         }
-        public bool insertProductInOrder(int order_id,int product_id,
-            int quantity,double price)
+        public bool insertProductInOrder(int order_id, int product_id,
+            int quantity, double price)
         {
             try
             {
@@ -218,7 +217,7 @@ namespace FINAL_PROJECT_DBMS.Model
             try
             {
                 string query = "SELECT * FROM UNPAID_ORDER";
-                SqlDataAdapter apt = new SqlDataAdapter(query,sqlCnt);
+                SqlDataAdapter apt = new SqlDataAdapter(query, sqlCnt);
                 DataTable data = new DataTable();
                 apt.Fill(data);
                 return data;
@@ -229,6 +228,59 @@ namespace FINAL_PROJECT_DBMS.Model
             }
             return null;
         }
+        public DataTable showFEE()
+        {
+            SqlConnection sqlCnt = getConnection();
+            try
+            {
+                string query = "SELECT * FROM FEE";
+                SqlDataAdapter apt = new SqlDataAdapter(query, sqlCnt);
+                DataTable Data = new DataTable();
+                apt.Fill(Data);
+                return Data;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return null;
+        }
+        public DataTable showHCMShop()
+            {
+            SqlConnection sqlCnt = getConnection();
+            try
+            {
+                string query = "SELECT * FROM HCM_SHOP";
+                SqlDataAdapter apt = new SqlDataAdapter(query, sqlCnt);
+                DataTable Data = new DataTable();
+                apt.Fill(Data);
+                return Data;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return null;
+            }
+        public DataTable showVoucherTODAY()
+        {
+            SqlConnection sqlCnt = getConnection();
+            try
+            {
+                string query = "SELECT * FROM VOUCHER_TODAY";
+                SqlDataAdapter apt = new SqlDataAdapter(query, sqlCnt);
+                DataTable Data = new DataTable();
+                apt.Fill(Data);
+                return Data;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return null;
+        }
+
+
         public bool checkoutPayment(int orderID,string voucher_id,string payment)
         {
             SqlConnection sqlCnt = getConnection();

@@ -51,8 +51,21 @@ namespace FINAL_PROJECT_DBMS.View
                 case "Phân tích chênh lệch phí duy trì cửa hàng":
                     {
                         showMessageDialog("Vui lòng nhập vào SHOP ID cần phân tích");
-                        request = 4;
-                        enableInput();
+                    }
+                    break;
+                case "1":
+                    {
+                        dgv_result.DataSource = dbCnt.showFEE();
+                    }
+                    break;
+                case "2":
+                    {
+                        dgv_result.DataSource = dbCnt.showHCMShop();
+                    }
+                    break;
+                case "3":
+                    {
+                        dgv_result.DataSource = dbCnt.showVoucherTODAY();
                     }
                     break;
             }
@@ -67,33 +80,19 @@ namespace FINAL_PROJECT_DBMS.View
         {
             MessageBox.Show(message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Question);
         }
-        private void enableInput()
-        {
-            txt_input.Enabled = true;
-            btn_input.Enabled = true;
-        }
-        private void disableInput()
-        {
-            txt_input.Enabled = false;
-            btn_input.Enabled = false;
-            txt_input.Clear();
-       
-        }
+      
 
         private void btn_input_Click(object sender, EventArgs e)
         {
-            switch (request)
-            {
-                case 4:
-                    {
-                        string shop_id = txt_input.Text;
-                        dgv_result.DataSource = dbCnt.showDiffBtwCost(shop_id);
-                        disableInput();
-                    }
-                    break;
+            
 
 
             }
+
+        private void dgv_result_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
-}
+    }
+
