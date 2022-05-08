@@ -432,5 +432,26 @@ namespace FINAL_PROJECT_DBMS.Model
             }
             return null;
         }
+        public DataTable showShopRevenue(int month)
+        {
+            SqlConnection cnt = getConnection();
+            try
+            {
+                string query = "shop_revenue";
+                SqlCommand cmd = new SqlCommand(query, cnt);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@month", month);
+                SqlDataAdapter apt = new SqlDataAdapter(cmd);
+                DataTable data = new DataTable();
+                apt.Fill(data);
+                return data;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return null;
+        }
     }  
 }

@@ -128,10 +128,11 @@ namespace FINAL_PROJECT_DBMS.View
             cbx_voucher.Items.Clear();
             try
             {
-                string query = "SELECT voucher_id FROM VOUCHER_ITEM WHERE c_phone_number=@c_phone";
+                string query = "view_voucher_of_cus";
                 sqlcnt.Open();
                 SqlCommand cmd = new SqlCommand(query, sqlcnt);
-                cmd.Parameters.AddWithValue("@c_phone", c_phone);
+                cmd.Parameters.AddWithValue("@c_phone_number", c_phone);
+                cmd.CommandType = CommandType.StoredProcedure;
                 SqlDataReader rd = cmd.ExecuteReader();
                 while (rd.Read())
                 {

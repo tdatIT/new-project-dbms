@@ -111,6 +111,12 @@
     <Compile Include="View\Analystic_1.Designer.cs">
       <DependentUpon>Analystic_1.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Analystic_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Analystic_2.Designer.cs">
+      <DependentUpon>Analystic_2.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\AnalyticsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Analystic_1.resx">
       <DependentUpon>Analystic_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Analystic_2.resx">
+      <DependentUpon>Analystic_2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\AnalyticsForm.resx">
       <DependentUpon>AnalyticsForm.cs</DependentUpon>

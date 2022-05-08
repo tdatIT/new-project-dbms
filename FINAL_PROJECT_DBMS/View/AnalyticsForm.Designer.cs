@@ -87,7 +87,8 @@
             "NV có kinh nghiệm làm việc( từ 2 tháng đến 3 tháng)",
             "Danh sách đơn hàng chưa thanh toán",
             "In ra 5 sản phẩm bán chạy nhất",
-            "Phân tích chênh lệch phí duy trì cửa hàng"});
+            "Phân tích chênh lệch phí duy trì cửa hàng",
+            "Xem doanh thu, lợi nhuận của cửa hàng"});
             this.cbx_func.Location = new System.Drawing.Point(284, 65);
             this.cbx_func.Name = "cbx_func";
             this.cbx_func.Size = new System.Drawing.Size(267, 21);

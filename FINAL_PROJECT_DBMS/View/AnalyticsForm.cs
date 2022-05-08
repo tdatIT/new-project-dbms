@@ -54,6 +54,12 @@ namespace FINAL_PROJECT_DBMS.View
                         analystic_1.Visible = true;
                     }
                     break;
+                case "Xem doanh thu, lợi nhuận của cửa hàng":
+                    {
+                        Analystic_2 analystic_2 = new Analystic_2();
+                        analystic_2.Visible = true;
+                    }
+                    break;
             }
         }
 
