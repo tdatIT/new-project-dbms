@@ -66,6 +66,33 @@ namespace FINAL_PROJECT_DBMS.View
                         Analystic_Voucher.Visible = true;
                     }
                     break;
+                case "Tổng chi phí 3 tháng gần nhất":
+                    {
+                        dgv_result.DataSource = dbCnt.showFee();
+                    }
+                    break;
+                case "Những chuỗi chi nhánh ở TP.HCM":
+                    {
+                        dgv_result.DataSource = dbCnt.showHcmShop();
+                    }
+                    break;
+                case "Voucher có thể sử dụng trong ngày":
+                    {
+                        dgv_result.DataSource = dbCnt.showVoucherToday();
+                    }
+                    break;
+                case "Xem số tiền khách hàng thanh toán":
+                    {
+                        AnalysticTotalPayment Total = new AnalysticTotalPayment();
+                        Total.Visible = true;
+                    }
+                    break;
+                case "Sản phẩm bán chạy của từng cửa hàng":
+                    {
+                        AnalysticProductBest Best = new AnalysticProductBest();
+                        Best.Visible = true;
+                    }
+                    break;
             }
         }
 

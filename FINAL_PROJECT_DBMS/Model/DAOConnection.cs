@@ -12,7 +12,7 @@ namespace FINAL_PROJECT_DBMS.Model
     public class DAOConnection
     {
         public static readonly string cntStr = "Data Source=DESKTOP-I5D50PI;Initial Catalog=DBMS_FINAL_PROJECT;Integrated Security=True";
-        
+  
         public DAOConnection()
         {
             
@@ -452,11 +452,9 @@ namespace FINAL_PROJECT_DBMS.Model
             }
             return null;
         }
+
         public DataTable showcountvoucherinmonth(int month)
         {
-            SqlConnection cnt = getConnection();
-            try
-            {
                 string query = "count_voucher_in_month";
                 SqlCommand cmd = new SqlCommand(query, cnt);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -465,9 +463,95 @@ namespace FINAL_PROJECT_DBMS.Model
                 DataTable data = new DataTable();
                 apt.Fill(data);
                 return data; 
+        }
 
+        public DataTable showTotalPayment(string PHONE_CUSTOMER)
+
+        {
+            SqlConnection cnt = getConnection();
+            try
+            {
+
+                string query = "SELECT * FROM view_total_payment_of_cus(@c_phone_number) ";
+                SqlCommand cmd = new SqlCommand(query, cnt);
+                cmd.Parameters.AddWithValue("@c_phone_number", SqlDbType.Char).Value = PHONE_CUSTOMER;
+                SqlDataAdapter apt = new SqlDataAdapter(cmd);
+                DataTable data = new DataTable();
+                apt.Fill(data);
+                return data;
             }
             catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return null;
+        }
+        public DataTable showBestSellProduct(string SHOPID)
+        {
+            SqlConnection cnt = getConnection();
+            try
+            {
+                string query = "products_best_sell_in_shop";
+                SqlCommand cmd = new SqlCommand(query, cnt);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@shop_id", SHOPID);
+                SqlDataAdapter apt = new SqlDataAdapter(cmd);
+                DataTable data = new DataTable();
+                apt.Fill(data);
+                return data;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return null;
+        }
+        public DataTable showFee()
+        {
+            SqlConnection sqlCnt = getConnection();
+            try
+            {
+                string query = "SELECT * FROM FEE";
+                SqlDataAdapter apt = new SqlDataAdapter(query, sqlCnt);
+                DataTable data = new DataTable();
+                apt.Fill(data);
+                return data;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return null;
+        }
+        public DataTable showHcmShop()
+        {
+            SqlConnection sqlCnt = getConnection();
+            try
+            {
+                string query = "SELECT * FROM HCM_SHOP";
+                SqlDataAdapter apt = new SqlDataAdapter(query, sqlCnt);
+                DataTable data = new DataTable();
+                apt.Fill(data);
+                return data;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return null;
+        }
+        public DataTable showVoucherToday()
+        {
+            SqlConnection sqlCnt = getConnection();
+            try
+            {
+                string query = "SELECT * FROM VOUCHER_TODAY";
+                SqlDataAdapter apt = new SqlDataAdapter(query, sqlCnt);
+                DataTable data = new DataTable();
+                apt.Fill(data);
+                return data;
+            }
+            catch (SqlException ex)
             {
                 MessageBox.Show(ex.Message);
             }

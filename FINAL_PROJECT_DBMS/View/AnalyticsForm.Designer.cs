@@ -90,7 +90,12 @@
             "In ra 5 sản phẩm bán chạy nhất",
             "Phân tích chênh lệch phí duy trì cửa hàng",
             "Xem doanh thu, lợi nhuận của cửa hàng",
-            "Thống kê voucher được sử dụng trong tháng"});
+            "Thống kê voucher được sử dụng trong tháng",
+            "Tổng chi phí 3 tháng gần nhất",
+            "Voucher có thể sử dụng trong ngày",
+            "Những chuỗi chi nhánh ở TP.HCM",
+            "Xem số tiền khách hàng thanh toán",
+            "Sản phẩm bán chạy của từng cửa hàng"});
             this.cbx_func.Location = new System.Drawing.Point(284, 65);
             this.cbx_func.Name = "cbx_func";
             this.cbx_func.Size = new System.Drawing.Size(267, 27);
