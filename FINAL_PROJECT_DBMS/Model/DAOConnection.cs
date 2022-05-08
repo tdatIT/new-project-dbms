@@ -11,7 +11,7 @@ namespace FINAL_PROJECT_DBMS.Model
 {
     public class DAOConnection
     {
-        public static readonly string cntStr = "Data Source=DESKTOP-I5D50PI;Initial Catalog=DBMS_FINAL_PROJECT;Integrated Security=True";
+        public static readonly string cntStr = "Data Source=localhost;Initial Catalog=DBMS_FINAL_PROJECT;User ID=sa;Password=12345";
   
         public DAOConnection()
         {
@@ -455,6 +455,7 @@ namespace FINAL_PROJECT_DBMS.Model
 
         public DataTable showcountvoucherinmonth(int month)
         {
+                SqlConnection cnt = getConnection();
                 string query = "count_voucher_in_month";
                 SqlCommand cmd = new SqlCommand(query, cnt);
                 cmd.CommandType = CommandType.StoredProcedure;

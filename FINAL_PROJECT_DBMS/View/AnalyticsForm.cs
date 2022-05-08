@@ -13,9 +13,7 @@ namespace FINAL_PROJECT_DBMS.View
 {
     public partial class AnalyticsForm : Form
     {
-        private static String str_id;
-        private static int int_id;
-        private static int request = 0;
+   
         private DAOConnection dbCnt;
         public AnalyticsForm()
         {
