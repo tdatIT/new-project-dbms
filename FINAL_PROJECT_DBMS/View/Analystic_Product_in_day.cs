@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FINAL_PROJECT_DBMS.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,23 +8,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FINAL_PROJECT_DBMS.Model;
 
-namespace FINAL_PROJECT_DBMS.Model
+namespace FINAL_PROJECT_DBMS.View
 {
-    public partial class AnalysticProductBest : Form
+    public partial class Analystic_Product_in_day : Form
     {
         DAOConnection db;
-        public AnalysticProductBest()
+        public Analystic_Product_in_day()
         {
             InitializeComponent();
             db = new DAOConnection();
         }
 
-        private void btn_enter_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            string shopID = textBox1.Text;
-            DataTable data = db.showBestSellProduct(shopID);
+            string create_day = textBox1.Text + "-" + textBox2.Text + "-" + textBox3.Text;
+            DataTable data = db.showProductInDay(create_day);
             if (data != null)
             {
                 dgv_result.DataSource = data;
@@ -32,7 +32,7 @@ namespace FINAL_PROJECT_DBMS.Model
                 MessageBox.Show("Không có dữ liệu !!!");
         }
 
-        private void dgv_result_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Analystic_Product_in_day_Load(object sender, EventArgs e)
         {
 
         }
