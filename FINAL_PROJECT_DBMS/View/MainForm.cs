@@ -15,7 +15,7 @@ namespace FINAL_PROJECT_DBMS
     public partial class Form1 : Form
     {
         private Button currentBtn;
-        private Form activeForm=null;
+        private Form activeForm=new Form();
         private DAOConnection cntDAO = null;
         public Form1()
         {
@@ -53,11 +53,12 @@ namespace FINAL_PROJECT_DBMS
                 activeForm.Close();
             }
             activeButton(btnSender);
+            activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            this.pn_child.Controls.Add(childForm);
-            this.pn_child.Tag = childForm;
+            pn_child.Controls.Add(childForm);
+            pn_child.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
 
