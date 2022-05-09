@@ -99,14 +99,5 @@ namespace FINAL_PROJECT_DBMS.View
             cbx_func.SelectedIndex = 0;
 
         }
-        private void showMessageDialog(string message)
-        {
-            MessageBox.Show(message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Question);
-        }
-
-        private void btn_input_Click(object sender, EventArgs e)
-        {
-        
-        }
     }
 }
