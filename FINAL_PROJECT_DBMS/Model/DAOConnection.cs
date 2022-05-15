@@ -11,7 +11,7 @@ namespace FINAL_PROJECT_DBMS.Model
 {
     public class DAOConnection
     {
-        public static readonly string cntStr = "Data Source=LAPTOP-VDUMRGAT\\SQLEXPRESS;Initial Catalog=DBMS_FINAL_PROJECT;Integrated Security=True";
+        public static string cntStr;
   
         public DAOConnection()
         {

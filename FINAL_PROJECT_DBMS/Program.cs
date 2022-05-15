@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FINAL_PROJECT_DBMS.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace FINAL_PROJECT_DBMS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new ConnectToDatabaseForm());
         }
     }
 }
