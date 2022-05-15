@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pn_result = new System.Windows.Forms.Panel();
             this.dgv_result = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -36,7 +35,6 @@
             this.btn_Enter = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-
             this.label2 = new System.Windows.Forms.Label();
             this.pn_result.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_result)).BeginInit();
@@ -56,14 +54,6 @@
             this.dgv_result.AllowUserToAddRows = false;
             this.dgv_result.AllowUserToDeleteRows = false;
             this.dgv_result.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_result.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_result.Location = new System.Drawing.Point(25, 18);
             this.dgv_result.Name = "dgv_result";
             this.dgv_result.ReadOnly = true;
@@ -77,9 +67,8 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(77, 66);
-
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(208, 28);
+            this.label1.Size = new System.Drawing.Size(169, 21);
             this.label1.TabIndex = 1;
             this.label1.Text = "Chức năng thực hiện";
             // 
@@ -99,14 +88,12 @@
             "Voucher có thể sử dụng trong ngày",
             "Những chuỗi chi nhánh ở TP.HCM",
             "Xem số tiền khách hàng thanh toán",
-
             "Sản phẩm bán chạy của từng cửa hàng",
             "Doanh thu trong ngày",
             "Sản phẩm đã bán trong ngày"});
             this.cbx_func.Location = new System.Drawing.Point(284, 66);
-
             this.cbx_func.Name = "cbx_func";
-            this.cbx_func.Size = new System.Drawing.Size(490, 36);
+            this.cbx_func.Size = new System.Drawing.Size(490, 29);
             this.cbx_func.TabIndex = 3;
             this.cbx_func.SelectedIndexChanged += new System.EventHandler(this.cbx_func_SelectedIndexChanged);
             // 
@@ -130,9 +117,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(384, 40);
+            this.label3.Location = new System.Drawing.Point(383, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(346, 46);
+            this.label3.Size = new System.Drawing.Size(277, 37);
             this.label3.TabIndex = 5;
             this.label3.Text = "PHÂN TÍCH DỮ LIỆU";
             // 
@@ -143,13 +130,13 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(171, 212);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 28);
+            this.label2.Size = new System.Drawing.Size(75, 21);
             this.label2.TabIndex = 6;
             this.label2.Text = "KẾT QUẢ";
             // 
             // AnalyticsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(136)))), ((int)(((byte)(230)))));
             this.ClientSize = new System.Drawing.Size(1038, 704);
