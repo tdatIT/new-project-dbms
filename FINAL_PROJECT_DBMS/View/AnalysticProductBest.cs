@@ -36,5 +36,10 @@ namespace FINAL_PROJECT_DBMS.Model
         {
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

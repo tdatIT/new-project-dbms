@@ -85,7 +85,7 @@ namespace FINAL_PROJECT_DBMS.Model
             // 
             // btn_enter
             // 
-            this.btn_enter.Location = new System.Drawing.Point(434, 148);
+            this.btn_enter.Location = new System.Drawing.Point(470, 148);
             this.btn_enter.Name = "btn_enter";
             this.btn_enter.Size = new System.Drawing.Size(109, 30);
             this.btn_enter.TabIndex = 13;
@@ -98,7 +98,7 @@ namespace FINAL_PROJECT_DBMS.Model
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(194, 109);
+            this.label1.Location = new System.Drawing.Point(145, 110);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(224, 23);
             this.label1.TabIndex = 12;
@@ -106,7 +106,7 @@ namespace FINAL_PROJECT_DBMS.Model
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(434, 110);
+            this.textBox1.Location = new System.Drawing.Point(459, 110);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(183, 22);
             this.textBox1.TabIndex = 11;

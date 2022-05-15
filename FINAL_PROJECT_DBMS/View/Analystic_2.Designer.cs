@@ -45,10 +45,10 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.dgv_result);
-            this.panel1.Location = new System.Drawing.Point(16, 201);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(16, 207);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(637, 326);
+            this.panel1.Size = new System.Drawing.Size(753, 358);
             this.panel1.TabIndex = 5;
             // 
             // dgv_result
@@ -61,12 +61,12 @@
             this.revenue,
             this.cost,
             this.profit});
-            this.dgv_result.Location = new System.Drawing.Point(17, 22);
-            this.dgv_result.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_result.Location = new System.Drawing.Point(20, 13);
+            this.dgv_result.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_result.Name = "dgv_result";
             this.dgv_result.ReadOnly = true;
             this.dgv_result.RowHeadersWidth = 51;
-            this.dgv_result.Size = new System.Drawing.Size(603, 287);
+            this.dgv_result.Size = new System.Drawing.Size(719, 342);
             this.dgv_result.TabIndex = 0;
             this.dgv_result.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_result_CellContentClick);
             // 
@@ -121,8 +121,8 @@
             // 
             // btn_enter
             // 
-            this.btn_enter.Location = new System.Drawing.Point(269, 143);
-            this.btn_enter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_enter.Location = new System.Drawing.Point(314, 142);
+            this.btn_enter.Margin = new System.Windows.Forms.Padding(4);
             this.btn_enter.Name = "btn_enter";
             this.btn_enter.Size = new System.Drawing.Size(145, 37);
             this.btn_enter.TabIndex = 8;
@@ -135,7 +135,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(87, 95);
+            this.label1.Location = new System.Drawing.Point(61, 94);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(160, 23);
@@ -144,8 +144,8 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(269, 95);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Location = new System.Drawing.Point(314, 95);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(243, 22);
             this.textBox1.TabIndex = 6;
@@ -155,13 +155,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(136)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(669, 554);
+            this.ClientSize = new System.Drawing.Size(782, 753);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_enter);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Analystic_2";

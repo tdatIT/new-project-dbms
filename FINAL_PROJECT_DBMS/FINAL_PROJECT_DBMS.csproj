@@ -248,7 +248,6 @@
     <EmbeddedResource Include="View\Analystic_2.resx">
       <DependentUpon>Analystic_2.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="View\Analystic_Product_in_day.resx">
       <DependentUpon>Analystic_Product_in_day.cs</DependentUpon>
     </EmbeddedResource>
@@ -334,6 +333,7 @@
     <Content Include="assets\boba_drink_bubble_tea_tea_cup_glass_icon_208001.png" />
     <Content Include="assets\branding_envelope_paper_send_mailing_mail_icon_193923.png" />
     <Content Include="assets\control_more_button_addition_box_plus_add_icon_21929.ico" />
+    <Content Include="assets\data_hosting_internet_lock_security_server_storage_icon_127054.ico" />
     <Content Include="assets\garbage_remove_clean_recycle_bin_waste_trash_icon_219330.ico" />
     <Content Include="assets\giphy.gif" />
     <Content Include="assets\inform_info_answer_support_faq_communication_information_icon_219306.ico" />

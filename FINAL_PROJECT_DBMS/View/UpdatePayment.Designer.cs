@@ -165,7 +165,7 @@
             // 
             // txt_id
             // 
-            this.txt_id.Location = new System.Drawing.Point(253, 72);
+            this.txt_id.Location = new System.Drawing.Point(303, 72);
             this.txt_id.Margin = new System.Windows.Forms.Padding(4);
             this.txt_id.Name = "txt_id";
             this.txt_id.Size = new System.Drawing.Size(181, 22);
@@ -185,7 +185,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(253, 117);
+            this.button1.Location = new System.Drawing.Point(325, 118);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
