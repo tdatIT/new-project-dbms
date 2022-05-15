@@ -153,6 +153,12 @@
     <Compile Include="View\AnalyticsForm.Designer.cs">
       <DependentUpon>AnalyticsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ConnectToDatabaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ConnectToDatabaseForm.Designer.cs">
+      <DependentUpon>ConnectToDatabaseForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\DeleteEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,6 +260,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\AnalyticsForm.resx">
       <DependentUpon>AnalyticsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ConnectToDatabaseForm.resx">
+      <DependentUpon>ConnectToDatabaseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\DeleteEmployee.resx">
       <DependentUpon>DeleteEmployee.cs</DependentUpon>
