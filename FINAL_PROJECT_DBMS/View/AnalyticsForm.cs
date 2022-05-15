@@ -91,12 +91,30 @@ namespace FINAL_PROJECT_DBMS.View
                         Best.Visible = true;
                     }
                     break;
+                case "Doanh thu trong ngày":
+                    {
+                        Analystic_Revenue_In_Day Revenue = new Analystic_Revenue_In_Day();
+                        Revenue.Visible = true;
+                    }
+                    break;
+                case "Sản phẩm đã bán trong ngày":
+                    {
+                        Analystic_Product_in_day Product = new Analystic_Product_in_day();
+                        Product.Visible = true;
+                    }
+                    break;
+
             }
         }
 
         private void AnalyticsForm_Load(object sender, EventArgs e)
         {
             cbx_func.SelectedIndex = 0;
+
+        }
+
+        private void cbx_func_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

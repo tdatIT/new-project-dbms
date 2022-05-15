@@ -31,5 +31,10 @@ namespace FINAL_PROJECT_DBMS.Model
             else
                 MessageBox.Show("Không có dữ liệu !!!");
         }
+
+        private void AnalysticTotalPayment_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
