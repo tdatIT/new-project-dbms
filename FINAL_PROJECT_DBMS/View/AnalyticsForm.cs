@@ -13,9 +13,7 @@ namespace FINAL_PROJECT_DBMS.View
 {
     public partial class AnalyticsForm : Form
     {
-        private static String str_id;
-        private static int int_id;
-        private static int request = 0;
+   
         private DAOConnection dbCnt;
         public AnalyticsForm()
         {
@@ -58,6 +56,12 @@ namespace FINAL_PROJECT_DBMS.View
                     {
                         Analystic_2 analystic_2 = new Analystic_2();
                         analystic_2.Visible = true;
+                    }
+                    break;
+                case "Thống kê voucher được sử dụng trong tháng":
+                    {
+                        Analystic_Voucher Analystic_Voucher = new Analystic_Voucher();
+                        Analystic_Voucher.Visible = true;
                     }
                     break;
                 case "Tổng chi phí 3 tháng gần nhất":
