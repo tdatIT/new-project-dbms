@@ -35,6 +35,8 @@
             this.cbx_func = new System.Windows.Forms.ComboBox();
             this.btn_Enter = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+
             this.label2 = new System.Windows.Forms.Label();
             this.pn_result.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_result)).BeginInit();
@@ -74,7 +76,8 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(123, 111);
+            this.label1.Location = new System.Drawing.Point(77, 66);
+
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(208, 28);
             this.label1.TabIndex = 1;
@@ -96,11 +99,16 @@
             "Voucher có thể sử dụng trong ngày",
             "Những chuỗi chi nhánh ở TP.HCM",
             "Xem số tiền khách hàng thanh toán",
-            "Sản phẩm bán chạy của từng cửa hàng"});
-            this.cbx_func.Location = new System.Drawing.Point(377, 111);
+
+            "Sản phẩm bán chạy của từng cửa hàng",
+            "Doanh thu trong ngày",
+            "Sản phẩm đã bán trong ngày"});
+            this.cbx_func.Location = new System.Drawing.Point(284, 66);
+
             this.cbx_func.Name = "cbx_func";
             this.cbx_func.Size = new System.Drawing.Size(490, 36);
             this.cbx_func.TabIndex = 3;
+            this.cbx_func.SelectedIndexChanged += new System.EventHandler(this.cbx_func_SelectedIndexChanged);
             // 
             // btn_Enter
             // 
@@ -170,6 +178,7 @@
         private System.Windows.Forms.ComboBox cbx_func;
         private System.Windows.Forms.Button btn_Enter;
         private System.Windows.Forms.Label label3;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label label2;
     }
 }

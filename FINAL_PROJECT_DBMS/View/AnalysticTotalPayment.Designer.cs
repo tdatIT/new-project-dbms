@@ -45,7 +45,7 @@ namespace FINAL_PROJECT_DBMS.Model
             this.panel1.Controls.Add(this.dgv_result);
             this.panel1.Location = new System.Drawing.Point(184, 195);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(338, 196);
+            this.panel1.Size = new System.Drawing.Size(395, 203);
             this.panel1.TabIndex = 10;
             // 
             // dgv_result
@@ -70,7 +70,7 @@ namespace FINAL_PROJECT_DBMS.Model
             this.TONGTIEN.MinimumWidth = 6;
             this.TONGTIEN.Name = "TONGTIEN";
             this.TONGTIEN.ReadOnly = true;
-            this.TONGTIEN.Width = 125;
+            this.TONGTIEN.Width = 200;
             // 
             // label2
             // 
@@ -116,14 +116,18 @@ namespace FINAL_PROJECT_DBMS.Model
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(136)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(816, 548);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_enter);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AnalysticTotalPayment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AnalysticTotalPayment";
+            this.Load += new System.EventHandler(this.AnalysticTotalPayment_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_result)).EndInit();
             this.ResumeLayout(false);
@@ -135,10 +139,10 @@ namespace FINAL_PROJECT_DBMS.Model
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dgv_result;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TONGTIEN;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_enter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TONGTIEN;
     }
 }

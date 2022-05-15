@@ -11,8 +11,10 @@ namespace FINAL_PROJECT_DBMS.Model
 {
     public class DAOConnection
     {
+
         public static string cntStr;
   
+
         public DAOConnection()
         {
             
@@ -553,6 +555,50 @@ namespace FINAL_PROJECT_DBMS.Model
                 return data;
             }
             catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return null;
+        }
+        public DataTable showRevenueInDay(string date)
+        {
+            
+            SqlConnection cnt = getConnection();
+            try
+            {
+                string query = "revenue_in_day";
+                SqlCommand cmd = new SqlCommand(query, cnt);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@day",date );
+                SqlDataAdapter apt = new SqlDataAdapter(cmd);
+                DataTable data = new DataTable();
+                apt.Fill(data);
+                return data;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return null;
+        }
+        public DataTable showProductInDay(string date)
+        {
+
+            SqlConnection cnt = getConnection();
+            try
+            {
+                string query = "product_in_day";
+                SqlCommand cmd = new SqlCommand(query, cnt);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@day", date);
+                SqlDataAdapter apt = new SqlDataAdapter(cmd);
+                DataTable data = new DataTable();
+                apt.Fill(data);
+                return data;
+
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
