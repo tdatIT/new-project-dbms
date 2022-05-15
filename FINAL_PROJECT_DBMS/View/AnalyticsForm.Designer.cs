@@ -34,7 +34,6 @@
             this.cbx_func = new System.Windows.Forms.ComboBox();
             this.btn_Enter = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.label2 = new System.Windows.Forms.Label();
             this.pn_result.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_result)).BeginInit();
@@ -165,7 +164,6 @@
         private System.Windows.Forms.ComboBox cbx_func;
         private System.Windows.Forms.Button btn_Enter;
         private System.Windows.Forms.Label label3;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label label2;
     }
 }
