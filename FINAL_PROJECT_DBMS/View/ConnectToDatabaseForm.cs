@@ -1,13 +1,6 @@
 ﻿using FINAL_PROJECT_DBMS.Model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FINAL_PROJECT_DBMS.View
@@ -16,7 +9,7 @@ namespace FINAL_PROJECT_DBMS.View
     {
         public static string USER;
         public static string PASS;
-        public static string DB_URL = "Data Source=localhost;Initial Catalog=DBMS_FINAL_PROJECT;";
+        public static string SV_NAME="localhost";
         public static string CNT_STR;
        
         public ConnectToDatabaseForm()
@@ -31,7 +24,7 @@ namespace FINAL_PROJECT_DBMS.View
 
         private void ConnectToDatabaseForm_Load(object sender, EventArgs e)
         {
-            txt_cnt.Text = DB_URL;
+            txt_cnt.Text = SV_NAME;
         }
         private bool IsServerConnected(string connectionString)
         {
@@ -53,8 +46,8 @@ namespace FINAL_PROJECT_DBMS.View
         {
             USER = txt_username.Text;
             PASS = txt_pass.Text;
-            DB_URL = txt_cnt.Text;
-            CNT_STR = DB_URL + "User ID=" + USER + ";Password=" + PASS;
+            SV_NAME = txt_cnt.Text;
+            CNT_STR = "Data Source="+SV_NAME + ";Initial Catalog=DBMS_FINAL_PROJECT;" + "User ID=" + USER + ";Password=" + PASS;
             if (IsServerConnected(CNT_STR))
             {
                 this.Hide();
