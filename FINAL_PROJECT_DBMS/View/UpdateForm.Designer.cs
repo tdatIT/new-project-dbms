@@ -41,9 +41,9 @@
             this.button3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
             this.button3.Location = new System.Drawing.Point(454, 506);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(300, 60);
+            this.button3.Size = new System.Drawing.Size(357, 80);
             this.button3.TabIndex = 6;
             this.button3.Text = "Cập nhật thanh toán";
             this.button3.UseVisualStyleBackColor = false;
@@ -57,9 +57,9 @@
             this.button2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Location = new System.Drawing.Point(454, 204);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(300, 60);
+            this.button2.Size = new System.Drawing.Size(357, 87);
             this.button2.TabIndex = 5;
             this.button2.Text = "Thay đổi thông tin sản phẩm";
             this.button2.UseVisualStyleBackColor = false;
@@ -72,10 +72,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(454, 357);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(454, 360);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(300, 60);
+            this.button1.Size = new System.Drawing.Size(357, 71);
             this.button1.TabIndex = 4;
             this.button1.Text = "Thăng chức cho NV";
             this.button1.UseVisualStyleBackColor = false;
@@ -90,7 +90,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UpdateForm";
             this.Text = "Update";
             this.Load += new System.EventHandler(this.UpdateForm_Load);
