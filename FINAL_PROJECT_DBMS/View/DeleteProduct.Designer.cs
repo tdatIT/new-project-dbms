@@ -42,7 +42,7 @@
             this.pn_1.Controls.Add(this.cbx_product_name);
             this.pn_1.Controls.Add(this.btn_enter);
             this.pn_1.Location = new System.Drawing.Point(47, 37);
-            this.pn_1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_1.Margin = new System.Windows.Forms.Padding(4);
             this.pn_1.Name = "pn_1";
             this.pn_1.Size = new System.Drawing.Size(521, 134);
             this.pn_1.TabIndex = 0;
@@ -64,7 +64,7 @@
             this.cbx_product_name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbx_product_name.FormattingEnabled = true;
             this.cbx_product_name.Location = new System.Drawing.Point(221, 17);
-            this.cbx_product_name.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbx_product_name.Margin = new System.Windows.Forms.Padding(4);
             this.cbx_product_name.Name = "cbx_product_name";
             this.cbx_product_name.Size = new System.Drawing.Size(272, 24);
             this.cbx_product_name.TabIndex = 4;
@@ -74,7 +74,7 @@
             // 
             this.btn_enter.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_enter.Location = new System.Drawing.Point(187, 71);
-            this.btn_enter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_enter.Margin = new System.Windows.Forms.Padding(4);
             this.btn_enter.Name = "btn_enter";
             this.btn_enter.Size = new System.Drawing.Size(144, 43);
             this.btn_enter.TabIndex = 3;
@@ -88,11 +88,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(616, 208);
             this.Controls.Add(this.pn_1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DeleteProduct";
-            this.Text = "Form2";
+            this.Text = "XÓA SẢN PHẨM";
             this.Load += new System.EventHandler(this.DeleteProduct_Load);
             this.pn_1.ResumeLayout(false);
             this.pn_1.PerformLayout();

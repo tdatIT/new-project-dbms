@@ -35,13 +35,15 @@ namespace FINAL_PROJECT_DBMS.Model
         public bool login(string username,string password)
         {
             SqlConnection cnt = getConnection();
-            string sql = "SELECT username,password FROM EMPLOYEE " +
-                "WHERE username='" + username + "' and password ='" + password + "'";
-            SqlDataAdapter adt = null;
+            string sql = "login";
+            SqlCommand cmd = new SqlCommand(sql, cnt);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@username", SqlDbType.Char).Value = username;
+            cmd.Parameters.AddWithValue("@pass", SqlDbType.Char).Value = password;
+            SqlDataAdapter adt = new SqlDataAdapter(cmd);
             DataTable data = new DataTable();
             try
             {
-                adt = new SqlDataAdapter(sql, cnt);
                 adt.Fill(data);
                 if (data.Rows.Count > 0)
                 {

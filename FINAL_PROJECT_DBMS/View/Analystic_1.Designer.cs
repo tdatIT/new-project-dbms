@@ -172,6 +172,7 @@
             this.Name = "Analystic_1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phân tích";
+            this.Load += new System.EventHandler(this.Analystic_1_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_result)).EndInit();
             this.ResumeLayout(false);

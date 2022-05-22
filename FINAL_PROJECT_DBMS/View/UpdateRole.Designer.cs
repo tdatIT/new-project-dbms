@@ -155,7 +155,7 @@
             this.MinimizeBox = false;
             this.Name = "UpdateRole";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UpdateRole";
+            this.Text = "CẬP NHẬT VỊ TRÍ NHÂN VIÊN";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

@@ -274,7 +274,7 @@
             this.MinimizeBox = false;
             this.Name = "Add_NewEmp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "q";
+            this.Text = "THÊM NHÂN VIÊN";
             this.Load += new System.EventHandler(this.Add_NewEmp_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

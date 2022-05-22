@@ -41,7 +41,6 @@ namespace FINAL_PROJECT_DBMS.View
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void btn_enter_Click(object sender, EventArgs e)
         {
             int order_id = Int32.Parse(textBox1.Text);

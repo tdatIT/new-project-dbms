@@ -43,6 +43,7 @@
             this.lb_chucnang = new System.Windows.Forms.Label();
             this.pn_child = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btn_logout = new System.Windows.Forms.Button();
             this.lb_notify = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -51,7 +52,6 @@
             this.btn_login = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_username = new System.Windows.Forms.TextBox();
-            this.btn_logout = new System.Windows.Forms.Button();
             this.pn_menu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pn_title.SuspendLayout();
@@ -205,7 +205,7 @@
             this.lbHello.AutoSize = true;
             this.lbHello.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHello.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.lbHello.Location = new System.Drawing.Point(77, 9);
+            this.lbHello.Location = new System.Drawing.Point(49, 20);
             this.lbHello.Name = "lbHello";
             this.lbHello.Size = new System.Drawing.Size(81, 23);
             this.lbHello.TabIndex = 1;
@@ -271,6 +271,19 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 15;
             this.pictureBox2.TabStop = false;
+            // 
+            // btn_logout
+            // 
+            this.btn_logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_logout.FlatAppearance.BorderSize = 0;
+            this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_logout.Location = new System.Drawing.Point(728, 159);
+            this.btn_logout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(82, 33);
+            this.btn_logout.TabIndex = 14;
+            this.btn_logout.Text = "Đăng xuất";
+            this.btn_logout.UseVisualStyleBackColor = false;
             // 
             // lb_notify
             // 
@@ -366,19 +379,6 @@
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(218, 29);
             this.txt_username.TabIndex = 2;
-            // 
-            // btn_logout
-            // 
-            this.btn_logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btn_logout.FlatAppearance.BorderSize = 0;
-            this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_logout.Location = new System.Drawing.Point(728, 159);
-            this.btn_logout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btn_logout.Name = "btn_logout";
-            this.btn_logout.Size = new System.Drawing.Size(82, 33);
-            this.btn_logout.TabIndex = 14;
-            this.btn_logout.Text = "Đăng xuất";
-            this.btn_logout.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 

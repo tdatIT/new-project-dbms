@@ -267,7 +267,7 @@ namespace FINAL_PROJECT_DBMS.View
             this.MinimizeBox = false;
             this.Name = "AddNewVoucher";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddNewVoucher";
+            this.Text = "THÊM VOUCHER";
             this.Load += new System.EventHandler(this.AddNewVoucher_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

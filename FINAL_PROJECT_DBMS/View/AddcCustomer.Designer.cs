@@ -194,7 +194,7 @@ namespace FINAL_PROJECT_DBMS
             this.MinimizeBox = false;
             this.Name = "AddcCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AddcCustomer";
+            this.Text = "THÊM KHÁCH HÀNG";
             this.Load += new System.EventHandler(this.AddcCustomer_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

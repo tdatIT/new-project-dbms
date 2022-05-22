@@ -215,7 +215,7 @@
             this.MinimizeBox = false;
             this.Name = "UpdateProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UpdateRole";
+            this.Text = "CẬP NHẬT SẢN PHẨM";
             this.pn_info.ResumeLayout(false);
             this.pn_info.PerformLayout();
             this.ResumeLayout(false);

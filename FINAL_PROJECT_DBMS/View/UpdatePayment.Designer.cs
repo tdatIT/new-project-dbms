@@ -210,7 +210,7 @@
             this.MinimizeBox = false;
             this.Name = "UpdatePayment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UpdatePayment";
+            this.Text = "CẬP NHẬT THANH TOÁN";
             this.pn_info.ResumeLayout(false);
             this.pn_info.PerformLayout();
             this.ResumeLayout(false);

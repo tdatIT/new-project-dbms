@@ -169,5 +169,10 @@ namespace FINAL_PROJECT_DBMS.View
         {
 
         }
+
+        private void txt_totalprice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
